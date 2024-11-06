@@ -1,0 +1,17 @@
+.destination {
+    padding: 20px;
+  }
+  
+  .destination-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .destination-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  

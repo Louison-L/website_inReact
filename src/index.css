@@ -1,0 +1,168 @@
+
+/* Home Page Specific Styles */
+:root {
+    --primary-color: #C69963;
+    --primary-dark: #B28451;
+    --secondary-color: #333;
+    --text-color: #54483A;
+    --text-light: #6D5D4B;
+    --background-light: #F9F7F6;
+    --white: #fff;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.5)
+    );
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Search Form */
+  .search-form {
+    transform: translateY(-50%);
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-dark);
+  }
+  
+  .search-input {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 0.75rem;
+    transition: all var(--transition-speed);
+  }
+  
+  .search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(198, 153, 99, 0.2);
+    outline: none;
+  }
+  
+  /* Featured Destinations */
+  .destination-card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform var(--transition-speed);
+  }
+  
+  .destination-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .destination-image {
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+  }
+  
+  .destination-card:hover .destination-image {
+    transform: scale(1.05);
+  }
+  
+  /* Responsivness design */
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    
+    
+    
+    margin: 0 auto 1rem;
+    transition: transform var(--transition-speed);
+
+  }
+  
+  .feature-icon:hover {
+    transform: rotate(360deg);
+  }
+  
+  /* Newsletter Section */
+  .newsletter-section {
+    background: linear-gradient(
+      135deg,
+      var(--primary-color),
+      var(--primary-dark)
+    );
+  }
+  
+  .newsletter-input {
+    border: none;
+    border-radius: 4px;
+    padding: 1em;
+    min-width: 300px;
+    transition: all var(--transition-speed);
+  }
+  
+  .newsletter-input:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    outline: none;
+  }
+  
+  .newsletter-button {
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+  }
+  
+  .newsletter-button:hover {
+    background: #000;
+    transform: translateY(-2px);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
